@@ -1,0 +1,265 @@
+/*: seudo selectores*/
+/*Almacenar variables custon propeti*/
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097A7;
+    --gris: #757575;
+   
+    --fuente-principal: 3.8rem;
+   }
+   
+   
+   html{
+       font-size: 62.5%;
+   }
+   
+   body {
+      font-size: 16px;/* 1 rem = 10px*/
+      font-family: 'Fira Sans Condensed', sans-serif;
+   }
+   
+  
+   
+   /*h1.titulo span {
+       font-size: 2rem;
+       color:blue;
+   }+/
+   
+   /*Especificidad*/
+   /*.titulo span {
+       font-size: 2rem;
+       color: red;
+   }*/
+   
+   /*
+   ¿Qué es Especificidad?
+   --Es como el navegador va a
+   mostrar el CSS de acuerdo a
+   que tan específico es el 
+   Selector que hemos creado
+   
+   CSS es en cascada, eso no significa que si  un
+   selector aparece después será tomado en cuenta
+   sino más bien su especificidad
+   */
+   
+   .contenedor {
+       
+       margin-top: 0;
+       /*Margen a la derecha*/
+       /* margin-right: auto;
+       margin-bottom: 0;+/
+       /*Margen izquierda*/
+       /*margin-left: auto;*/
+      /* margin: 0 auto 0 auto;*/
+       /*El primero es el de arriva y aabajo*/
+       /*El segundo es el de la izquierda y derecha*/
+       margin:0 auto;
+   /*
+   Los margenes van a decirnos
+   en que posición se va colocar un elemento
+   */
+   }
+   
+   
+   /*
+   Display block o Display Inline
+   
+   Algunos elementos se muestran de una forma y otros de otra
+   Todos los elementos en HTML ya tienen un display por default
+   
+   Display: block;
+   Significa que el elemento se colocará uno debajo del otro sin importar su tamaño
+   
+   Display inline
+   Significa que el elmento se posicionará a la derecha una vez que haya tomado el 
+   espacio que requiere
+   
+   Ningun elemento tiene un 
+   displa: flex; o display: grid; por
+   default
+   
+   No es necesario especificar un display para cada elemento, salvo
+   que deses modificar el viene por default
+   
+   */
+   
+   
+
+
+
+
+   
+   .encabezado-principal {
+   /*Hacer el lemento más alto*/
+   padding: 1rem .5rem;
+
+
+
+ 
+   }
+   
+
+   .encavezado-principal-nav a {
+
+
+    width: 100%;
+    height: 100%;
+
+    /*Alinear vertical como horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+  
+ 
+
+
+   @media (min-width: 480px) {
+    .encavezado-principal-nav a {
+        max-width: 120rem;
+        display: flex;
+        margin-left: 1rem;
+        margin-top: 2rem;
+        flex-direction: column;
+        /*align-items: center;*/
+        /*align-items: flex-end*/
+        align-items: flex-start;
+        color: var(--blanco);
+        text-decoration: none;
+
+    
+    }
+ 
+   
+    
+}
+
+
+   .nav-enlace {
+     margin-bottom: 1rem;
+
+   }
+
+   .titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--blanco);
+    /*font-family: 'Krub', sans-serif;*/
+   }
+
+.titulo-servicio {
+    width: 100%;
+    height: 100%;
+
+    /*Alinear vertical como horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
+.iconos {
+
+
+
+width: 100%;
+height: 100%;
+
+/*Alinear vertical como horizontalmente*/
+display: flex;
+flex-direction: column;
+
+align-items: center;
+justify-content: center;
+  
+
+}
+
+@media (min-width: 480px) {
+.iconos{
+    width: 100%;
+    height: 100%;
+
+    
+    /*Alinear vertical como horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: #47a0f8;
+
+
+}
+}
+
+.m {
+
+    margin-right: 2rem;
+}
+
+.servicios {  
+    background-color: #47a0f8;
+}
+
+
+
+
+   @media (min-width: 480px) {
+    .servicios{
+
+        display: grid;
+        /*grid-template-columns: 33.3% 33.3% 33.3%;*/
+        /*grid-template-columns: 1fr 1fr 1fr;*/
+        grid-template-columns: repeat(3,1fr);
+        background-color: #47a0f8;
+       /* grid-template-columns: 300px 300px;
+        grid-template-rows: 200px 800px;
+        grid:200px 800px /300px 300px;*/
+    }
+    
+}
+
+
+.formularios{
+
+    background-color: #cdcfd1;
+
+}
+
+
+
+@media (min-width: 480px) {
+    .formularios{
+
+        display: grid;
+        /*grid-template-columns: 33.3% 33.3% 33.3%;*/
+        /*grid-template-columns: 1fr 1fr 1fr;*/
+        grid-template-columns: repeat(3,1fr);
+        background-color: #cdcfd1;
+       /* grid-template-columns: 300px 300px;
+        grid-template-rows: 200px 800px;
+        grid:200px 800px /300px 300px;*/
+    }
+    
+}
+
+.Formulario-datos {
+    width: 100%;
+    height: 100%;
+
+    /*Alinear vertical como horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
